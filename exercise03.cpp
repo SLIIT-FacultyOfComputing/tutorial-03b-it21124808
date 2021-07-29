@@ -1,43 +1,52 @@
 #include <iostream>
-
 using namespace std;
 
-int volume(int height, int width, int length);
+int volume(int height, int width, int length); //function declaration
+struct box{
 
-// 1. Define a structure called Box
-// have the integer data types Height, Width, Length
+    int height; //declaring variable
+    int width; //declaring variable
+    int length; //declaring variable
 
-// Do not change the main function
-int main() {
-    // 2. Create a variable called box1 of the Box structure type
-    // int box1Height, box1Width, box1Length;
-    // 3. Create a variable called box2 of the Box structure type
-    
-    // int box2Height, box2Width, box2Length;
-    int totalVolume;
-    
-    // 4. Input the height, width, lenght of box1 and box2
-    cout << "Enter Box 1 Height : ";
-    cin >> Height of Box 1;
-    cout << "Enter Box 1 Width : ";
-    cin >> Width of Box 1;
-    cout << "Enter Box 1 Length : ";
-    cin >> Length of Box 1;
-    
-    cout << "Enter Box 2 Height : ";
-    cin >> Height of Box 2;
-    cout << "Enter Box 2 Width : ";
-    cin >> Width of Box 2;
-    cout << "Enter Box 2 Length : ";
-    cin >> Length of Box 2;
-    
-    // 5. Replace the coding below to pass the Box type structure
-    totalVolume = volume( , , )
-             + volume( , , );
-    
-    cout << "Volume of Box is " << totalVolume << endl;
-    
-    return 0;
-}
+}; //defining a structure
+//function main begins with program execution
+int main() 
+{
 
-// Implement the functions here
+       box box1; //declaring variable
+       box box2; //declaring variable
+       int totalVolume; //declaring variable
+    
+    
+         cout << "Enter Box 1 Height : "; //prompt
+         cin >> box1.height; //read
+         cout << "Enter Box 1 Width : "; //prompt
+         cin >> box1.width; //read
+         cout << "Enter Box 1 Length : "; //prompt
+         cin >> box1.length; //read
+
+         cout << endl; //newline
+    
+         cout << "Enter Box 2 Height : "; //prompt
+         cin >> box2.height; //read
+         cout << "Enter Box 2 Width : "; //prompt
+         cin >> box2.width; //read
+         cout << "Enter Box 2 Length : "; //prompt
+         cin >> box2.length; //read
+    
+    
+         totalVolume = volume(box1.height, box1.width, box1.length)
+             + volume(box2.height, box2.width, box2.length); //function calling
+
+         cout << endl; //newline
+         cout << "Volume of Box is " << totalVolume << endl; //display
+    
+                   return 0;
+
+} //end of the main function
+int volume(int height, int width, int length) //function implementation
+{
+
+      return height * width * length;
+
+} //end of the function

@@ -1,21 +1,34 @@
 #include <iostream>
 using namespace std;
 
-void print(int len, int wth);
-void input(int len, int wth);
+void print(int &len, int &wth); //function declaration
+void input(int &len, int &wth); //function declaration
+// function main begins with program execution
+int main() 
+{
 
-// Do not change the main() function
-int main() {
-   int length = 10, width = 5;
-   input(length, width);
-   print(length, width);
-   return 0;
-}
+    int length = 10, width = 5; //declaring variable
 
-// Do not change the print() function
-void print(int len, int wth) {
-   cout << "Length : " << len 
-        << ", Width  : " << wth << endl;
-}
+    input(length, width); //function calling
+    print(length, width); //function calling
 
-// Implement the Input Function here
+        return 0;
+
+} //end of the main function
+void print(int &len, int &wth) //function implementation
+{
+
+        cout << "Length : " << len 
+        << ", Width  : " << wth << endl; //display
+
+} //end of the function
+void input(int &len, int &wth) //function implementation
+{
+
+         cout << "Length : "; //prompt
+         cin >> len; //read
+
+         cout << "Width : "; //prompt
+         cin >> wth; //read
+
+} //end of the function
